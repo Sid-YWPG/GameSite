@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Tic Tac Toe</h1>
+            <div class="scoreboard">
+                <div class="score">
+                    <span>X Score:</span>
+                    <span id="x-score">0</span>
+                </div>
+                <div class="score">
+                    <span>O Score:</span>
+                    <span id="o-score">0</span>
+                </div>
+            </div>
+            <div class="options">
+                <button id="singleplayer-btn" onclick="selectMode('single')">Singleplayer</button>
+                <button id="multiplayer-btn" onclick="selectMode('multi')">Multiplayer</button>
+            </div>
+        </header>
+    
+        <div class="board" id="board">
+            <div class="cell" onclick="play(0)"></div>
+            <div class="cell" onclick="play(1)"></div>
+            <div class="cell" onclick="play(2)"></div>
+            <div class="cell" onclick="play(3)"></div>
+            <div class="cell" onclick="play(4)"></div>
+            <div class="cell" onclick="play(5)"></div>
+            <div class="cell" onclick="play(6)"></div>
+            <div class="cell" onclick="play(7)"></div>
+            <div class="cell" onclick="play(8)"></div>
+        </div>
+    </div>
+
+    <div id="win-popup" class="popup">
+        <div class="popup-content">
+            <span id="win-message"></span>
+            <button onclick="closePopup()">Close</button>
+        </div>
+    </div>
+
+    <div id="lose-popup" class="popup">
+        <div class="popup-content">
+            <span id="lose-message"></span>
+            <button onclick="closePopup()">Close</button>
+        </div>
+    </div>
+
+    <div id="draw-popup" class="popup">
+        <div class="popup-content">
+            <span id="draw-message">It's a Tie!</span>
+            <button onclick="closePopup()">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
